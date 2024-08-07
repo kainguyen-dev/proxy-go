@@ -1,0 +1,15 @@
+service:
+  service_name: "proxy-service"
+  http_port: 2000
+  grpc_port: 2100
+
+integration:
+  core_service:
+    url: http://localhost:8080
+    timeout: 30000 # ms
+  monitor_service:
+    url: http://localhost:8080
+    timeout: 30000 # ms
+  job_service:
+    url: http://localhost:8080
+    timeout: 30000 # ms

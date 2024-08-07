@@ -1,0 +1,29 @@
+server:
+  service_name: "proxy-service"
+  http_port: 2000
+  grpc_port: 2100
+
+integration:
+  core_service:
+    url: http://abs-dev-nlb-88dd47a0af663557.elb.us-east-1.amazonaws.com
+    timeout: 30000 # ms
+  monitor_service:
+    url: http://abs-dev-nlb-88dd47a0af663557.elb.us-east-1.amazonaws.com
+    timeout: 30000 # ms
+  job_service:
+    url: http://abs-dev-nlb-88dd47a0af663557.elb.us-east-1.amazonaws.com
+    timeout: 30000 # ms
+
+database:
+  host: localhost
+  port: 25432
+  user: postgres
+  password: postgres
+  database: core-db
+
+#database:
+#  host: energy-monitoring-dev-db.cmtdpqtiqoaq.us-east-1.rds.amazonaws.com
+#  port: 5432
+#  user: master
+#  password: VIUBI6V298
+#  database: core-db
